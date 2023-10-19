@@ -86,9 +86,15 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
-
+//books.forEach((book)=> console.log(book.authorFirst, book.authorLast, "wrote", book.name, "in", book.publishDate));
 //Sort books from oldest to most recent
-
+const bookAge = []
+books.forEach((book)=> bookAge.push(book.publishDate));
+function compareAge(a, b) {
+  return a - b;
+}
+bookAge.sort(compareAge);
+console.log(bookAge);
 //sort books alphabetically
 
 //Find who wrote War and Peace
